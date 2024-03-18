@@ -1,0 +1,69 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string name = Console.ReadLine();
+            int badMarcsCounter = 0;
+            double totalMark = 0;
+            int gradeNum = 1;
+            while (gradeNum<=12)
+            {
+                double mark = double.Parse(Console.ReadLine());
+                totalMark += mark;
+                if (mark < 4)
+                {
+                    badMarcsCounter++;
+                    if (badMarcsCounter>1)
+                    {
+                    Console.WriteLine($"{name} has been excluded at {gradeNum} grade");
+                    return;                 
+
+                    }
+                }               
+                else
+                {
+                    gradeNum++;
+                }
+                        
+           }
+                double avregeGrade = totalMark / (12 + badMarcsCounter);
+                Console.WriteLine($"{name} graduated. Average grade: {avregeGrade:f2}");
+
+
+
+
+
+        }
+
+
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

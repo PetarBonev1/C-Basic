@@ -1,0 +1,56 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int maxNum = int.MinValue;
+            string input = Console.ReadLine();
+            while (input != "Stop") 
+            {
+                int n = int.Parse(input);
+                if (n>maxNum)
+                {
+                    maxNum = n;
+                }
+                input = Console.ReadLine();
+            }
+            Console.WriteLine(maxNum);
+
+                
+
+
+
+
+
+
+
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

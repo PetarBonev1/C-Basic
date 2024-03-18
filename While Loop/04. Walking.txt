@@ -1,0 +1,67 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int stepTarget = 10000;
+            int currSteps = 0;
+            string input;
+            int stepsHome;
+            while ((input = Console.ReadLine()) != "Going home")
+            {
+                int steps = int.Parse(input);
+                currSteps +=steps;
+                if (currSteps>=stepTarget)
+                {
+                    Console.WriteLine("Goal reached! Good job!");
+                    Console.WriteLine($"{currSteps-stepTarget} steps over the goal!");
+                    return;
+                }
+                else
+                {
+
+                }
+            }
+                stepsHome = int.Parse(Console.ReadLine());
+                currSteps += stepsHome;
+            if (currSteps>=stepTarget)
+            {
+                
+                Console.WriteLine("Goal reached! Good job!");
+                Console.WriteLine($"{currSteps - stepTarget} steps over the goal!");
+                
+            }
+            else 
+            {
+                Console.WriteLine($"{Math.Abs (stepTarget-currSteps)} more steps to reach goal.");
+            }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
