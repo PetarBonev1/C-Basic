@@ -1,0 +1,35 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            decimal  record = decimal.Parse(Console.ReadLine());
+            decimal  lenght = decimal.Parse(Console.ReadLine());
+            decimal time = decimal.Parse(Console.ReadLine());
+
+            decimal timeNeeded = lenght * time;
+            decimal suprotiwlenie = ((int)(lenght / 15) * 12.5m);
+            decimal totalTime = timeNeeded + suprotiwlenie;
+            if (totalTime > record)
+            {
+                Console.Write("No, he failed! ");
+                Console.Write($"He was { Math.Abs(record- totalTime):f2} seconds slower.");
+            }
+            else if (totalTime < record)
+            {
+                Console.WriteLine($"Yes, he succeeded! The new world record is { Math.Abs (totalTime):f2} seconds.");
+            }
+
+
+
+
+
+        }
+
+
+
+    }
+}
