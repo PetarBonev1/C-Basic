@@ -1,0 +1,19 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int pagesCount = int.Parse(Console.ReadLine());
+            int pagesPerHour = int.Parse(Console.ReadLine());
+            int DaysCount = int.Parse(Console.ReadLine());
+            int hoursNeeded = pagesCount / pagesPerHour;
+            int hoursPerDay = hoursNeeded / DaysCount;
+            Console.WriteLine(hoursPerDay);
+
+
+        }
+    }
+}

@@ -1,0 +1,25 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int nailon = int.Parse(Console.ReadLine());
+            int boq = int.Parse(Console.ReadLine());
+            int razreditel = int.Parse(Console.ReadLine());
+            int nujniChasa = int.Parse(Console.ReadLine());
+
+            double cenaNailoni = (nailon + 2) * 1.50;
+            double cenaBoq = ((boq + (0.10 * boq)) * 14.50);
+            double cenaRazreditel = razreditel * 5.00;
+            double torbichki = 0.40;
+            double totalMateriali = cenaNailoni + cenaBoq + cenaRazreditel + torbichki;
+            double cenaMaistori =  (0.30 * totalMateriali) * nujniChasa;
+            double totalprice = totalMateriali + cenaMaistori;
+            Console.WriteLine(totalprice);
+
+        }
+    }
+}

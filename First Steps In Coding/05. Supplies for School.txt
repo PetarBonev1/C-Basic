@@ -1,0 +1,23 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int paketihimikali = int.Parse(Console.ReadLine());
+            int paketiMarkeri = int.Parse(Console.ReadLine());
+            double litriPreparat = double.Parse(Console.ReadLine());
+            int procentNamalenie = int.Parse(Console.ReadLine());
+
+            double cenaHImikali = paketihimikali * 5.80;
+            double cenaMarkeri = paketiMarkeri * 7.20;
+            double cenaPreparat = litriPreparat * 1.20;
+            double totalPrice = cenaHImikali + cenaMarkeri + cenaPreparat;
+            double cenaNamalenie = totalPrice - (totalPrice * procentNamalenie/100);
+            Console.WriteLine(cenaNamalenie);
+
+        }
+    }
+}

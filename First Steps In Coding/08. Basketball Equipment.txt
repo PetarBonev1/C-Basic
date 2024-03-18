@@ -1,0 +1,20 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int annualTax = int.Parse(Console.ReadLine());
+            double sneakersPrice = annualTax-(0.4*annualTax);
+            double clothesPrice = sneakersPrice-(0.2*sneakersPrice);
+            double ballPrice = 0.25* clothesPrice;
+            double accessories = 0.2*ballPrice;
+            double totalPrice = annualTax + sneakersPrice + clothesPrice + ballPrice + accessories;
+            Console.WriteLine(totalPrice);
+
+
+        }
+    }
+}

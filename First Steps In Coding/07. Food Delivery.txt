@@ -1,0 +1,23 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int chichken = int.Parse(Console.ReadLine());
+            int fish = int.Parse(Console.ReadLine());
+            int vegan = int.Parse(Console.ReadLine());
+
+            double priceChichken = chichken * 10.35;
+            double priceFish = fish * 12.40;
+            double priceVegan = vegan * 8.15;
+             double total = priceChichken + priceFish + priceVegan;
+            double desertPrice = total * 0.20;
+            double totalTotal = total + desertPrice + 2.50;
+            Console.WriteLine(totalTotal);
+
+        }
+    }
+}

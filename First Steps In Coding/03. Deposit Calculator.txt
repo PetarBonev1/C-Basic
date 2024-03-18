@@ -1,0 +1,21 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double deposit = double.Parse(Console.ReadLine());
+            int srok = int.Parse(Console.ReadLine());
+            double lihva = double.Parse(Console.ReadLine());
+
+            double natrupanaLIhwa = deposit *lihva*0.01;
+            double oneMonthLIhwa = natrupanaLIhwa / 12;
+            double sum = deposit +srok * oneMonthLIhwa;
+            Console.WriteLine(sum);
+
+
+        }
+    }
+}
