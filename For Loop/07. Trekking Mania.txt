@@ -1,0 +1,84 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double n = int.Parse(Console.ReadLine());
+            double totalNum = 0;
+            double num;
+            double  musala = 0;
+            double monblan= 0;
+            double kilimandjaro = 0;
+            double k2 = 0;
+            double everest = 0;
+            
+            for (int i = 1; i <= n; i++)
+            {
+                num = int.Parse(Console.ReadLine());
+                totalNum += num;
+                if (num >= 0 && num < 6)
+                {
+                    musala += num;
+                }
+                else if (num > 5 && num < 13)
+                {
+                    monblan += num;
+                }
+                else if (num > 12 && num < 26)
+                {
+                    kilimandjaro += num;
+                }
+                else if (num > 25 && num < 41)
+                {
+                    k2 += num;
+                }
+                else if (num >= 41)
+                { 
+                    everest += num; 
+                }
+            }
+            musala = (musala / totalNum);
+            musala *= 100;
+            monblan = monblan / totalNum * 100;
+            kilimandjaro = kilimandjaro / totalNum * 100;
+            k2 = k2 / totalNum * 100;
+            everest = everest / totalNum * 100;
+
+            Console.WriteLine($"{musala:f2}%");
+            Console.WriteLine($"{monblan:f2}%");
+            Console.WriteLine($"{kilimandjaro:f2}%");
+            Console.WriteLine($"{k2:f2}%");
+            Console.WriteLine($"{everest:f2}%");
+
+        }
+
+
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
