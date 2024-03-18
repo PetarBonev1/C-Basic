@@ -1,0 +1,88 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string type = Console.ReadLine();
+            int quantity = int.Parse(Console.ReadLine());
+            int budget = int.Parse(Console.ReadLine());
+
+
+            double price = 0;
+
+            if (type == "Roses")
+            {
+                price = 5;
+                if (quantity > 80)
+                {
+                    price = 5 * 0.90;
+                }
+            }
+            else if (type == "Dahlias")
+            {
+                price = 3.80;
+                if (quantity > 90)
+                {
+                    price = 3.80 * 0.85;
+                }
+            }
+            else if (type == "Tulips")
+            {
+                price = 2.80;
+                if (quantity > 80)
+                {
+                    price = 2.80 * 0.85;
+                }
+            }
+            else if (type == "Narcissus")
+            {
+                price = 3.00;
+                if (quantity < 120)
+                {
+                    price = 3.00*1.15;
+                }
+            }
+            else if (type == "Gladiolus")
+            {
+                price = 2.50;
+                if (quantity < 80)
+                {
+                    price = 2.50*1.20;
+                }
+            }
+
+
+            double totalPrice = quantity * price;
+            double moneyLeft = budget - totalPrice;
+            double moneyNeeded = totalPrice-budget;
+            if (totalPrice < budget)
+            {
+                Console.WriteLine($"Hey, you have a great garden with {quantity} {type} and {Math.Abs(moneyLeft):f2} leva left.");
+            }
+            else if (totalPrice > budget)
+            {
+                Console.WriteLine($"Not enough money, you need { Math.Abs(moneyNeeded):f2} leva more.");
+            }
+
+
+        }
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+

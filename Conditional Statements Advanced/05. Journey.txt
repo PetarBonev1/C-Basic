@@ -1,0 +1,88 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double budget = double.Parse(Console.ReadLine());
+            string season = Console.ReadLine();
+            string locatioon = "";
+            string stay = "";
+            double cost = 0;
+
+            if (season == "summer")
+            {
+                if (budget <= 100)
+                {
+                    locatioon = "Bulgaria";
+                    stay = "Camp";
+                    cost = budget * 0.30;
+                }
+                else if (budget <= 1000)
+                {
+                    locatioon = "Balkans";
+                    stay = "Camp";
+                    cost = budget * 0.40;
+                }
+                else if (budget > 1000)
+                {
+                    locatioon = "Europe";
+                    stay = "Hotel";
+                    cost = budget * 0.90;
+                }
+            }
+            else if (season == "winter")
+            {
+                if (budget <= 100)
+                {
+                    locatioon = "Bulgaria";
+                    stay = "Hotel";
+                    cost = budget * 0.70;
+                }
+                else if (budget <= 1000)
+                {
+                    locatioon = "Balkans";
+                    stay = "Hotel";
+                    cost = budget * 0.80;
+                }
+                else if (budget > 1000)
+                {
+                    locatioon = "Europe";
+                    stay = "Hotel";
+                    cost = budget * 0.90;
+                }
+            }
+            Console.WriteLine($"Somewhere in {locatioon}");
+            Console.WriteLine($"{stay} - {cost:f2}");
+
+        }
+
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
