@@ -1,0 +1,46 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string figura = Console.ReadLine();
+            if (figura == "square")
+            {
+                double side = double.Parse(Console.ReadLine());
+                double result = side * side;
+                Console.WriteLine($"{result:f3}");
+            }
+            else if (figura == "rectangle")
+            {
+                double strana1 = double.Parse(Console.ReadLine());
+                double side2 = double.Parse(Console.ReadLine());
+                double results = strana1 * side2;
+                Console.WriteLine($"{results:f3}");
+
+            }
+            else if (figura == "circle")
+            {
+                double radius = double.Parse(Console.ReadLine());
+                double result = radius * radius * Math.PI;
+                Console.WriteLine($"{ result:f3}");
+
+            }
+            else if (figura == "triangle")
+            {
+                double side1 = double.Parse(Console.ReadLine());
+                double side2 = double.Parse(Console.ReadLine());
+                double results = side1 * side2 / 2;
+                Console.WriteLine($"{ results:f3}");
+            }
+
+
+
+        }
+
+
+
+    }
+}
