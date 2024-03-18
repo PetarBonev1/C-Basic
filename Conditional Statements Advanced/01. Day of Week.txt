@@ -1,0 +1,48 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Number = int.Parse(Console.ReadLine());
+            if (Number == 1)
+            {
+                Console.WriteLine("Monday");
+            }
+            else if (Number == 2)
+            {
+                Console.WriteLine("Tuesday");
+            }
+            else if (Number == 3)
+            {
+                Console.WriteLine("Wednesday");
+            }
+            else if (Number == 4)
+            {
+                Console.WriteLine("Thursday");
+            }
+            else if (Number == 5)
+            {
+                Console.WriteLine("Friday");
+            }
+            else if (Number == 6)
+            {
+                Console.WriteLine("Saturday");
+            }
+            else if (Number == 7)
+            {
+                Console.WriteLine("Sunday");
+            }
+            else
+            {
+                Console.WriteLine("Error");
+            }
+
+
+        }
+
+         
+    }
+}

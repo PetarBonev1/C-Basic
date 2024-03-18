@@ -1,0 +1,118 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string City = Console.ReadLine();
+            decimal sales = decimal.Parse(Console.ReadLine());
+            decimal komisionna = 0;
+            bool haveError = false;
+
+            if (City =="Sofia")
+            {
+                if (sales>=0 && sales<=500)
+                {
+                    komisionna =  0.05m;
+                }
+                else if (sales>500 && sales<=1000)
+                {
+                    komisionna = 0.07m;
+                }
+                else if (sales > 1000 && sales <= 10000)
+                {
+                    komisionna = 0.08m;
+                }
+                else if (sales>10000)
+                {
+                    komisionna = 0.12m;
+                }
+                
+                else
+                {
+                    haveError = true;
+                    Console.WriteLine("error");
+                }
+            }
+            else if (City == "Varna")
+            {
+                if (sales >= 0 && sales <= 500)
+                {
+                    komisionna = 0.045m;
+                }
+                else if (sales > 500 && sales <= 1000)
+                {
+                    komisionna = 0.075m;
+                }
+                else if (sales > 1000 && sales <= 10000)
+                {
+                    komisionna = 0.10m;
+                }
+                else if (sales > 10000)
+                {
+                    komisionna = 0.13m;
+                }
+                
+                else
+                {
+                    haveError = true;
+                    Console.WriteLine("error");
+                }
+            }
+            else if (City == "Plovdiv")
+            {
+                if (sales >= 0 && sales <= 500)
+                {
+                    komisionna = 0.055m;
+                }
+                else if (sales > 500 && sales <= 1000)
+                {
+                    komisionna = 0.08m;
+                }
+                else if (sales > 1000 && sales <= 10000)
+                {
+                    komisionna = 0.12m;
+                }
+                else if (sales > 10000)
+                {
+                    komisionna = 0.145m;
+                }
+
+                else
+                {
+                    haveError = true;
+                    Console.WriteLine("error");
+                }
+            }
+
+
+
+            else
+            {
+                haveError = true;
+                Console.WriteLine("error");
+            }
+
+            if (haveError != true)
+            {
+
+                decimal totalSum = sales * komisionna;
+                Console.WriteLine  ("{0:F2}", (totalSum)); 
+            }
+
+
+
+        }
+
+    }
+}
+
+
+
+
+
+
+

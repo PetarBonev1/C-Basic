@@ -1,0 +1,118 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string fruit = Console.ReadLine();
+            string date = Console.ReadLine();
+            double quantity = double.Parse(Console.ReadLine());
+            double Price = 0;
+            bool haveError = false;
+            
+            if (date == "Monday" || date == "Tuesday" || date == "Wednesday" || date == "Thursday" || date == "Friday")
+            {
+
+
+            
+            
+
+                if (fruit == "banana")
+                {
+                    Price = 2.50;
+                }
+                else if (fruit == "apple")
+                {
+                    Price = 1.20;
+                }
+                else if (fruit == "orange")
+                {
+                    Price = 0.85;
+                }
+                else if (fruit == "grapefruit")
+                {
+                    Price = 1.45;
+                }
+                else if (fruit == "kiwi")
+                {
+                    Price = 2.70;
+                }
+                else if (fruit == "pineapple")
+                {
+                    Price = 5.50;
+                }
+                else if (fruit == "grapes")
+                {
+                    Price = 3.85;
+                }
+                else
+                {
+                    haveError = true;
+                    Console.WriteLine("error");
+                }
+            }
+            else if (date == "Saturday" || date == "Sunday")
+            {
+                if (fruit == "banana")
+                {
+                    Price = 2.70;
+                }
+                else if (fruit == "apple")
+                {
+                    Price = 1.25;
+                }
+                else if (fruit == "orange")
+                {
+                    Price = 0.90;
+                }
+                else if (fruit == "grapefruit")
+                {
+                    Price = 1.60;
+                }
+                else if (fruit == "kiwi")
+                {
+                    Price = 3.00;
+                }
+                else if (fruit == "pineapple")
+                {
+                    Price = 5.60;
+                }
+                else if (fruit == "grapes")
+                {
+                    Price = 4.20;
+                }
+                else
+                {
+                    haveError = true;
+                    Console.WriteLine("error");
+                }
+            }
+            else
+            {
+                haveError = true;
+                Console.WriteLine("error");
+            }
+
+            if (haveError!=true)
+            {
+
+            double totalSum = quantity * Price;
+            Console.WriteLine("{0:F2}", totalSum);
+            }
+
+
+
+        }
+
+    }
+}
+
+
+
+
+
+
+

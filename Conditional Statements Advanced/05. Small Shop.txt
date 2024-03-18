@@ -1,0 +1,95 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string Product = Console.ReadLine();
+            string City = Console.ReadLine();
+            double quantity = double.Parse(Console.ReadLine());
+            double Price = 0;
+
+            if (City == "Sofia")
+            {
+                if (Product == "coffee")
+
+                {
+                    Price = 0.50;
+                }
+                if (Product == "water")
+                {
+                    Price = 0.80;
+                }
+                else if (Product == "beer")
+                {
+                    Price = 1.20;
+                }
+                else if (Product == "sweets")
+                {
+                    Price = 1.45;
+                }
+                else if (Product == "peanuts")
+                {
+                    Price = 1.60;
+                }
+            }
+            else if (City == "Plovdiv")
+            {
+                if (Product == "coffee")
+
+                {
+                    Price = 0.40;
+                }
+                if (Product == "water")
+                {
+                    Price = 0.70;
+                }
+                else if (Product == "beer")
+                {
+                    Price = 1.15;
+                }
+                else if (Product == "sweets")
+                {
+                    Price = 1.30;
+                }
+                else if (Product == "peanuts")
+                {
+                    Price = 1.50;
+                }
+            }
+            else if (City == "Varna")
+            {
+                if (Product == "coffee")
+
+                {
+                    Price = 0.45;
+                }
+                if (Product == "water")
+                {
+                    Price = 0.70;
+                }
+                else if (Product == "beer")
+                {
+                    Price = 1.10;
+                }
+                else if (Product == "sweets")
+                {
+                    Price = 1.35;
+                }
+                else if (Product == "peanuts")
+                {
+                    Price = 1.55;
+                }
+            }
+            double TotalPrice = Price * quantity;
+            Console.WriteLine(TotalPrice);
+        }
+
+
+
+
+    }
+}
+
