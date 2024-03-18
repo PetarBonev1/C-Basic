@@ -1,0 +1,21 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int countOfDogFood = int.Parse(Console.ReadLine());
+            int countOfCatFood = int.Parse(Console.ReadLine());
+            int priceOfCatFood = countOfCatFood * 4;
+            double priceOfDogFood=(double)countOfDogFood*2.50;
+
+            double sum = (double)priceOfCatFood + priceOfDogFood;
+            Console.WriteLine($"{sum } lv.");
+            
+
+
+        }
+    }
+}

@@ -1,0 +1,15 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double number = double.Parse(Console.ReadLine());
+            number*= 2.54;
+            Console.WriteLine(number);
+
+}
+    }
+}

@@ -1,0 +1,18 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string firstName = Console.ReadLine();
+            
+            int numberOfProjects = int.Parse(Console.ReadLine());
+             int hours = numberOfProjects * 3;
+            Console.WriteLine($"The architect {firstName} will need {hours} hours to complete {numberOfProjects} project/s.");
+            
+                
+}
+    }
+}

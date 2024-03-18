@@ -1,0 +1,19 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double razmer = double.Parse(Console.ReadLine());
+            double cena =razmer * 7.61;
+            double otstypka = cena*0.18;
+
+            Console.WriteLine($"The final price is:{ cena-otstypka} lv" );
+            Console.WriteLine($"The discount is:{otstypka} lv" );
+
+
+        }
+    }
+}
