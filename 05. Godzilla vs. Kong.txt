@@ -1,0 +1,37 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());
+            int numberOfStilist = int.Parse(Console.ReadLine());
+            double priceOfOneClothing = double.Parse(Console.ReadLine());
+            double priceOfDecor = budget * 0.10;
+            double PriceOfClothing = numberOfStilist * priceOfOneClothing;
+            if (numberOfStilist >= 150)
+            {
+                PriceOfClothing *= 0.90;
+            }
+            double totalPrice = priceOfDecor + PriceOfClothing;
+            budget = budget - totalPrice;
+            if (budget<0)
+            {
+                Console.WriteLine("Not enough money!");
+                Console.WriteLine($"Wingard needs {Math.Abs(budget):f2} leva more.");
+            }
+            else
+            {
+                Console.WriteLine("Action!");
+                Console.WriteLine($"Wingard starts filming with {budget:f2} leva left.");
+            }
+
+
+        }
+
+
+
+    }
+}

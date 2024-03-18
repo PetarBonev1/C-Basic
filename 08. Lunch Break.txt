@@ -1,0 +1,31 @@
+using System;
+
+namespace zad1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
+            int time = int.Parse(Console.ReadLine());
+            int breakTime = int.Parse(Console.ReadLine());
+
+            double lunchTime =(double) breakTime * 1 / 8;
+            double timeForOtdih = (double)breakTime * 0.25 ;
+            double timeLeft = breakTime - lunchTime - timeForOtdih;
+                double result = Math.Abs(timeLeft - (double)time);
+            if (timeLeft >= time)
+            {
+                Console.WriteLine($"You have enough time to watch {name} and left with {Math.Ceiling(result)} minutes free time.");
+            }
+            else  
+            {
+                
+                Console.WriteLine($"You don't have enough time to watch {name}, you need { Math.Ceiling(result)} more minutes.");
+            }
+        }
+
+
+
+    }
+}
